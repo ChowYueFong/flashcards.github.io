@@ -59,11 +59,14 @@ function findRomaji() {
 
 function marking() {
   const currentRomaji = findRomaji();
+  const currentInput = romajiInput.value.toLowerCase();
+
+  // console.log(currentInput);
 
   // console.log(currentRomaji);
 
   if (currentRomaji) {
-    if (romajiInput.value === currentRomaji) {
+    if (currentInput === currentRomaji) {
       correctMark.classList.remove("hide-correct");
       romajiInput.value = "";
       setTimeout(() => {
