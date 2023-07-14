@@ -1,0 +1,170 @@
+/* flashcards */
+#flashcard-test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.flashcard-div {
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 160px;
+  position: relative;
+}
+
+/* Correct and Wrong styling */
+#correct-mark {
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+  color: rgb(34, 255, 34);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrong-mark {
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide-correct,
+.hide-wrong {
+  visibility: hidden;
+}
+
+/* Settings styling */
+#open-settings {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+#open-settings svg {
+  width: 75px;
+  height: 75px;
+  color: grey;
+}
+
+#open-settings:hover svg {
+  opacity: 0.8;
+}
+
+#settings-popup {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#settings-popup h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+#settings-popup h5 {
+  font-size: 16px;
+  text-align: center;
+}
+
+#settings-popup button {
+  padding: 5px 10px;
+}
+
+#select-hiragana,
+#select-katakana {
+  background-color: black;
+  color: rgb(220, 220, 220);
+}
+
+#select-hiragana:hover,
+#select-katakana:hover {
+  opacity: 0.8;
+}
+
+#close-settings {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+#close-settings svg {
+  width: 75px;
+  height: 75px;
+  color: grey;
+}
+
+#close-settings:hover svg {
+  opacity: 0.8;
+}
+
+/* Input stylings */
+.input-divs {
+  height: 30px;
+  width: 50vw;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-divs button {
+  height: 100%;
+  width: 20%;
+}
+
+#romaji,
+#meaning {
+  height: 100%;
+  width: 80%;
+  padding: 0 10px;
+}
+
+#romaji::placeholder,
+#meaning::placeholder {
+  font-size: 1.1em;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  #flashcard-test {
+    height: 93.5vh;
+  }
+}
