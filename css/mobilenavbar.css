@@ -1,0 +1,66 @@
+#hidden-nav-bar {
+  display: none;
+}
+
+.mobile-nav-bar {
+  background: linear-gradient(
+    to right,
+    80% var(--background-black-1),
+    var(--background-black-2)
+  );
+  padding: 5px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 6.5vh;
+}
+
+#hamburger {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+#hamburger svg {
+  width: 30px;
+  height: 30px;
+  color: var(--font-color);
+}
+
+#nav-bar-dropdown {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--button-background);
+  background-color: var(--button-background);
+  padding: 20px 0;
+  gap: 20px;
+  border-radius: 3px;
+  z-index: 20;
+  opacity: 0.9;
+}
+
+#nav-bar-dropdown button {
+  width: 30%;
+  padding: 3px;
+  background-color: var(--button-background);
+  border: 2px solid var(--font-color);
+  color: var(--font-color);
+}
+
+@media (max-width: 600px) {
+  #hidden-nav-bar {
+    display: block;
+  }
+}
