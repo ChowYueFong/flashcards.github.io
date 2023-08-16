@@ -7,6 +7,7 @@
 
 .checkbox-wrapper {
   margin: 20px 0;
+  padding: 3px 5px;
   width: 80vw;
   height: 50px;
   background-color: var(--primary-beige);
@@ -58,4 +59,13 @@ td {
 
 tr:nth-of-type(even) {
   background-color: hsl(19, 100%, 91%);
+}
+
+@media (max-width: 600px) {
+  .checkbox-wrapper label {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
