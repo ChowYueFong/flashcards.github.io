@@ -212,7 +212,7 @@ function marking(selection) {
     }
   }
 
-  if (currentRomaji === romajiInput.value) {
+  if (currentRomaji === romajiInput.value.toLowerCase()) {
     setTimeout(() => {
       flashcardCorrect.style.animation = "fade-out 250ms ease-in-out forwards";
     }, 300);
