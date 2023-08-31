@@ -18,6 +18,15 @@ const dropdownButton = document.getElementById("selection-dropdown-button");
 const arrowUpButton = document.getElementById("selection-up-button");
 const selectionSection = document.querySelector(".selection");
 const checkboxWrapper = document.querySelector(".checkbox-wrapper");
+const hiraganaCheckbox = document.getElementById("hiragana");
+const hiraCombCheckbox = document.getElementById("hiragana-combination");
+const katakanaCheckbox = document.getElementById("katakana");
+const kataCombCheckbox = document.getElementById("katakana-combination");
+const display = document.getElementById("display");
+const romajiInput = document.getElementById("romaji");
+const markButton = document.getElementById("mark-romaji");
+
+let selection = [];
 
 dropdownButton.addEventListener("click", () => {
   dropdownButton.style.display = "none";
@@ -49,15 +58,22 @@ arrowUpButton.addEventListener("click", () => {
   dropdownButton.style.display = "block";
 });
 
-const hiraganaCheckbox = document.getElementById("hiragana");
-const hiraCombCheckbox = document.getElementById("hiragana-combination");
-const katakanaCheckbox = document.getElementById("katakana");
-const kataCombCheckbox = document.getElementById("katakana-combination");
-const display = document.getElementById("display");
-const romajiInput = document.getElementById("romaji");
-const markButton = document.getElementById("mark-romaji");
+romajiInput.addEventListener("click", () => {
+  checkboxWrapper.classList.add("checkbox-wrapper-disappear");
 
-let selection = [];
+  setTimeout(() => {
+    // Checkbox wrapper
+    checkboxWrapper.style.display = "none";
+
+    // Selection
+    selectionSection.style.borderRadius = "5px";
+
+    checkboxWrapper.classList.remove("checkbox-wrapper-disappear");
+  }, 250);
+
+  arrowUpButton.style.display = "none";
+  dropdownButton.style.display = "block";
+});
 
 async function mainLogic() {
   const JAPANESE = await getJapanese();
@@ -128,8 +144,6 @@ async function mainLogic() {
     marking(selection);
   });
 }
-
-mainLogic();
 
 function checkboxChecking(
   HIRAGANA,
@@ -246,3 +260,5 @@ function marking(selection) {
     romajiInput.value = "";
   }
 }
+
+mainLogic();

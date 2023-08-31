@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcards</title>
-    <link rel="stylesheet" href=".././style/navbar.css" />
+    <title>Resources</title>
+    <link rel="stylesheet" href="../style/navbar.css" />
     <link rel="stylesheet" href=".././style/root.css" />
-    <link rel="stylesheet" href=".././style/resources.css" />
+    <link rel="stylesheet" href="../style/japanese.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,7 @@
     <!-- https://fonts.google.com/specimen/Edu+SA+Beginner -->
     <!-- https://fonts.google.com/specimen/Playfair+Display -->
     <!-- https://fonts.google.com/specimen/PT+Serif?query=type -->
-    <script src="../script/flashcard.js" defer></script>
+    <script src="../script/japanese.js" defer></script>
     <script src="../script/mobile.js" defer></script>
   </head>
   <body>
@@ -26,10 +26,12 @@
       </div>
       <div class="nav-right">
         <a href="../index.html" class="nav-home underline">Home</a>
-        <a href="../html/resources.html" class="nav-resource underline"
+        <a
+          href="../html/resources.html"
+          class="nav-resource underline nav-selected"
           >Resources</a
         >
-        <a href="../html/flashcard.html" class="nav-chamber nav-selected"
+        <a href="../html/flashcard.html" class="nav-chamber underline"
           >Flashcards</a
         >
       </div>
@@ -71,35 +73,41 @@
           <a href="../html/resources.html" class="nav-resource underline-white"
             >Resources</a
           >
-          <a
-            href="../html/flashcard.html"
-            class="nav-chamber nav-selected-white"
+          <a href="../html/flashcard.html" class="nav-chamber underline-white"
             >Flashcards</a
           >
         </div>
       </div>
     </nav>
     <div class="container">
-      <section
-        class="flashcard-section"
-        style="font-family: Edu SA Beginner, cursive"
-      >
-        Test what you have learnt with
-        <span
-          style="
-            color: hsl(247, 44%, 60%);
-            font-family: Edu SA Beginner, cursive;
-          "
-          >Flashcards</span
-        >
-      </section>
-      <a href="../html/j-flashcard.html" class="items japanese">
-        <h2 class="underline">Japanese</h2>
-      </a>
-      <div class="items korean">
-        <h2 class="underline-white" style="color: var(--primary-white)">
-          Korean
-        </h2>
+      <form class="checkbox-wrapper">
+        <div>
+          <input type="checkbox" id="hiragana" />
+          <label for="hiragana">Hiragana</label>
+        </div>
+        <div>
+          <input type="checkbox" id="hiragana-combination" />
+          <label for="hiragana-combination">Hiragana-combination</label>
+        </div>
+        <div>
+          <input type="checkbox" id="katakana" />
+          <label for="katakana">Katakana</label>
+        </div>
+        <div>
+          <input type="checkbox" id="katakana-combination" />
+          <label for="katakana-combination">Katakana-combination</label>
+        </div>
+      </form>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Japanese</th>
+              <th>Romaji</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
   </body>

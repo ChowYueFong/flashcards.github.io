@@ -42,11 +42,29 @@
   background-position: center;
 }
 
+.flashcard-section {
+  font-size: 48px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
 @keyframes fade-in {
   from {
     opacity: 1;
   }
   to {
     opacity: 0.7;
+  }
+}
+
+@media (max-width: 600px) {
+  .flashcard-section {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .flashcard-section {
+    font-size: 32px;
   }
 }

@@ -86,6 +86,10 @@ body {
   font-size: 100px;
 }
 
+#display {
+  text-align: center;
+}
+
 #flashcard-correct {
   background-color: hsl(120, 85%, 65%);
   width: 55%;
@@ -168,5 +172,15 @@ body {
 @media (max-width: 600px) {
   .flashcard-wrapper {
     width: 90%;
+  }
+
+  #flashcard {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .flashcard-wrapper {
+    width: 75%;
   }
 }
